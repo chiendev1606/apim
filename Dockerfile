@@ -1,4 +1,4 @@
-FROM node:16.18.0-alpine
+FROM node:16
 
 # speed up npm install a little on docker
 # RUN npm config set registry http://registry.npmjs.org/
