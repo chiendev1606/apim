@@ -38,9 +38,9 @@
     "web-vitals": "2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired  start",
+    "build": "react-app-rewired  build",
+    "eject": "react-app-rewired  eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\" --config ./.prettierrc"
@@ -64,14 +64,20 @@
     "@typescript-eslint/parser": "5.27.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "customize-cra": "^1.0.0",
-    "eslint": "8.17.0",
+    "eslint": "^8.27.0",
     "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "react-app-rewired": "^2.2.1"
+  },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   }
 }

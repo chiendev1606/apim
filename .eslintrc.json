@@ -4,13 +4,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript",
-    "plugin:react/jsx-runtime",
-    "plugin:prettier/recommended"
-  ],
+  "extends": "react-app",
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,14 +14,17 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [ "@typescript-eslint"],
   "settings": {
     "react": {
       "pragma": "React",
       "fragment": "Fragment",
       "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
     }
   },
+  "plugins": ["eslint-plugin-prettier"],
   "rules": {
     "prettier/prettier": [
       "warn",
@@ -41,7 +38,7 @@
     "react/display-name": "off",
     "@typescript-eslint/comma-dangle": "off",
     "import/prefer-default-export": "off",
-    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-is-valid": "warn",
     "comma-dangle": "off",
     "max-len": "off",
     "no-console": "off",
@@ -69,7 +66,7 @@
     "@typescript-eslint/no-unused-vars": ["warn"],
     "@typescript-eslint/dot-notation": ["off"],
     "react/prop-types": ["off"],
-    "@typescript-eslint/naming-convention": ["off"],
+    "@typescript-eslint/naming-convention": ["warn"],
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/explicit-function-return-type": "off",

@@ -8,9 +8,10 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from 'src/App';
-import { SidebarProvider } from 'src/contexts/SidebarContext';
+import { SidebarProvider } from './contexts/SidebarContext';
 import { rootStore } from './store';
+
+import App from '@/App';
 
 const queryClient = new QueryClient();
 
