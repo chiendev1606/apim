@@ -15,11 +15,11 @@ const ComponentTable: React.FC = () => {
     { field: 'gold' },
     { field: 'silver' },
     { field: 'bronze' },
-    { field: 'total' }
+    { field: 'total' },
   ]);
   const defaultColDef = useMemo(() => {
     return {
-      editable: true
+      editable: true,
     };
   }, []);
 

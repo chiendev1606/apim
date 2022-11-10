@@ -3,13 +3,11 @@ import { ThemeProvider } from '@mui/material';
 import { themeCreator } from './base';
 import { StylesProvider } from '@mui/styles';
 import useLocalStorageState from 'use-local-storage-state';
-export const ThemeContext = React.createContext(
-  (themeName: string): void => {}
-);
+export const ThemeContext = React.createContext((themeName: string): void => {});
 
 const ThemeProviderWrapper: React.FC = (props) => {
   const [curThemeName, setCurThemeName] = useLocalStorageState('appTheme', {
-    defaultValue: 'PureLightTheme'
+    defaultValue: 'PureLightTheme',
   });
   const [themeName, _setThemeName] = useState(curThemeName);
   const theme = themeCreator(themeName);

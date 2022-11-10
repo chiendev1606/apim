@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 const HorizontalLine = styled('div')({
   marginTop: '.9375rem',
   marginBottom: '.9375rem',
-  borderBottomStyle: 'ridge'
+  borderBottomStyle: 'ridge',
 });
 const HorizontalLineComponent: FC = () => {
   return (

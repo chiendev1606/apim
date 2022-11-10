@@ -9,19 +9,9 @@ interface PageTitleProps {
   docs?: string;
 }
 
-const PageTitle: FC<PageTitleProps> = ({
-  heading = '',
-  subHeading = '',
-  docs = '',
-  ...rest
-}) => {
+const PageTitle: FC<PageTitleProps> = ({ heading = '', subHeading = '', docs = '', ...rest }) => {
   return (
-    <Grid
-      container
-      justifyContent="space-between"
-      alignItems="center"
-      {...rest}
-    >
+    <Grid container justifyContent="space-between" alignItems="center" {...rest}>
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
           {heading}
@@ -47,7 +37,7 @@ const PageTitle: FC<PageTitleProps> = ({
 PageTitle.propTypes = {
   heading: PropTypes.string,
   subHeading: PropTypes.string,
-  docs: PropTypes.string
+  docs: PropTypes.string,
 };
 
 export default PageTitle;

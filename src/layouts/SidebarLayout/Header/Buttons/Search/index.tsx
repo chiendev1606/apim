@@ -1,36 +1,36 @@
-import { forwardRef, Ref, useState, ReactElement, ChangeEvent } from 'react';
+import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import {
   Avatar,
-  Link,
   Box,
   Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
   Divider,
+  Hidden,
   IconButton,
   InputAdornment,
   lighten,
+  Link,
   List,
   ListItem,
   ListItemAvatar,
+  Slide,
   TextField,
   Theme,
   Tooltip,
   Typography,
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  Slide,
-  Hidden
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { TransitionProps } from '@mui/material/transitions';
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
-import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone';
+import { forwardRef, ReactElement, Ref, useState } from 'react';
 
 import ChevronRightTwoToneIcon from '@mui/icons-material/ChevronRightTwoTone';
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & { children: ReactElement<any, any> },
-  ref: Ref<unknown>
+  ref: Ref<unknown>,
 ) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
@@ -44,7 +44,7 @@ const DialogWrapper = styled(Dialog)(
     .MuiDialog-paperScrollPaper {
         max-height: calc(100vh - 64px)
     }
-`
+`,
 );
 
 const SearchInputWrapper = styled(TextField)(
@@ -54,14 +54,14 @@ const SearchInputWrapper = styled(TextField)(
     .MuiInputBase-input {
         font-size: ${theme.typography.pxToRem(17)};
     }
-`
+`,
 );
 
 const DialogTitleWrapper = styled(DialogTitle)(
   ({ theme }) => `
     background: ${theme.colors.alpha.black[5]};
     padding: ${theme.spacing(3)}
-`
+`,
 );
 
 function HeaderSearch() {
@@ -105,19 +105,17 @@ function HeaderSearch() {
         maxWidth="md"
         fullWidth
         scroll="paper"
-        onClose={handleClose}
-      >
+        onClose={handleClose}>
         <DialogTitleWrapper>
           <SearchInputWrapper
             value={searchValue}
-            autoFocus={true}
             onChange={handleSearchChange}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
                   <SearchTwoToneIcon />
                 </InputAdornment>
-              )
+              ),
             }}
             placeholder="Search terms here..."
             fullWidth
@@ -128,18 +126,10 @@ function HeaderSearch() {
 
         {openSearchResults && (
           <DialogContent>
-            <Box
-              sx={{ pt: 0, pb: 1 }}
-              display="flex"
-              justifyContent="space-between"
-            >
+            <Box sx={{ pt: 0, pb: 1 }} display="flex" justifyContent="space-between">
               <Typography variant="body2" component="span">
                 Search results for{' '}
-                <Typography
-                  sx={{ fontWeight: 'bold' }}
-                  variant="body1"
-                  component="span"
-                >
+                <Typography sx={{ fontWeight: 'bold' }} variant="body1" component="span">
                   {searchValue}
                 </Typography>
               </Typography>
@@ -154,22 +144,15 @@ function HeaderSearch() {
                   <ListItemAvatar>
                     <Avatar
                       sx={{
-                        background: (theme: Theme) =>
-                          theme.palette.secondary.main
-                      }}
-                    >
+                        background: (theme: Theme) => theme.palette.secondary.main,
+                      }}>
                       <FindInPageTwoToneIcon />
                     </Avatar>
                   </ListItemAvatar>
                 </Hidden>
                 <Box flex="1">
                   <Box display="flex" justifyContent="space-between">
-                    <Link
-                      href="#"
-                      underline="hover"
-                      sx={{ fontWeight: 'bold' }}
-                      variant="body2"
-                    >
+                    <Link href="#" underline="hover" sx={{ fontWeight: 'bold' }} variant="body2">
                       Dashboard for Healthcare Platform
                     </Link>
                   </Box>
@@ -177,12 +160,9 @@ function HeaderSearch() {
                     component="span"
                     variant="body2"
                     sx={{
-                      color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
-                    }}
-                  >
-                    This page contains all the necessary information for
-                    managing all hospital staff.
+                      color: (theme: Theme) => lighten(theme.palette.secondary.main, 0.5),
+                    }}>
+                    This page contains all the necessary information for managing all hospital staff.
                   </Typography>
                 </Box>
                 <ChevronRightTwoToneIcon />
@@ -193,22 +173,15 @@ function HeaderSearch() {
                   <ListItemAvatar>
                     <Avatar
                       sx={{
-                        background: (theme: Theme) =>
-                          theme.palette.secondary.main
-                      }}
-                    >
+                        background: (theme: Theme) => theme.palette.secondary.main,
+                      }}>
                       <FindInPageTwoToneIcon />
                     </Avatar>
                   </ListItemAvatar>
                 </Hidden>
                 <Box flex="1">
                   <Box display="flex" justifyContent="space-between">
-                    <Link
-                      href="#"
-                      underline="hover"
-                      sx={{ fontWeight: 'bold' }}
-                      variant="body2"
-                    >
+                    <Link href="#" underline="hover" sx={{ fontWeight: 'bold' }} variant="body2">
                       Example Projects Application
                     </Link>
                   </Box>
@@ -216,10 +189,8 @@ function HeaderSearch() {
                     component="span"
                     variant="body2"
                     sx={{
-                      color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
-                    }}
-                  >
+                      color: (theme: Theme) => lighten(theme.palette.secondary.main, 0.5),
+                    }}>
                     This is yet another search result pointing to a app page.
                   </Typography>
                 </Box>
@@ -231,22 +202,15 @@ function HeaderSearch() {
                   <ListItemAvatar>
                     <Avatar
                       sx={{
-                        background: (theme: Theme) =>
-                          theme.palette.secondary.main
-                      }}
-                    >
+                        background: (theme: Theme) => theme.palette.secondary.main,
+                      }}>
                       <FindInPageTwoToneIcon />
                     </Avatar>
                   </ListItemAvatar>
                 </Hidden>
                 <Box flex="1">
                   <Box display="flex" justifyContent="space-between">
-                    <Link
-                      href="#"
-                      underline="hover"
-                      sx={{ fontWeight: 'bold' }}
-                      variant="body2"
-                    >
+                    <Link href="#" underline="hover" sx={{ fontWeight: 'bold' }} variant="body2">
                       Search Results Page
                     </Link>
                   </Box>
@@ -254,12 +218,9 @@ function HeaderSearch() {
                     component="span"
                     variant="body2"
                     sx={{
-                      color: (theme: Theme) =>
-                        lighten(theme.palette.secondary.main, 0.5)
-                    }}
-                  >
-                    Choose if you would like to show or not this typography
-                    section here...
+                      color: (theme: Theme) => lighten(theme.palette.secondary.main, 0.5),
+                    }}>
+                    Choose if you would like to show or not this typography section here...
                   </Typography>
                 </Box>
                 <ChevronRightTwoToneIcon />

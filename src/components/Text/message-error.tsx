@@ -7,7 +7,7 @@ interface TMessageErrorPropsType {
 
 const TextWrapper = styled('p')({
   margin: 0,
-  color: 'red'
+  color: 'red',
 });
 
 const MessageErrorComponent: FC<TMessageErrorPropsType> = ({ message }) => {

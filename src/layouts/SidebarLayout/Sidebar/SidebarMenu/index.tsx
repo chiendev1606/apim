@@ -1,14 +1,6 @@
 import { useContext } from 'react';
 
-import {
-  ListSubheader,
-  alpha,
-  Box,
-  List,
-  styled,
-  Button,
-  ListItem
-} from '@mui/material';
+import { ListSubheader, alpha, Box, List, styled, Button, ListItem } from '@mui/material';
 import { NavLink as RouterLink } from 'react-router-dom';
 import { SidebarContext } from 'src/contexts/SidebarContext';
 
@@ -43,7 +35,7 @@ const MenuWrapper = styled(Box)(
       padding: ${theme.spacing(0, 2.5)};
       line-height: 1.4;
     }
-`
+`,
 );
 
 const SubMenuWrapper = styled(Box)(
@@ -139,10 +131,7 @@ const SubMenuWrapper = styled(Box)(
                 content: ' ';
                 background: ${theme.colors.alpha.trueWhite[100]};
                 opacity: 0;
-                transition: ${theme.transitions.create([
-                  'transform',
-                  'opacity'
-                ])};
+                transition: ${theme.transitions.create(['transform', 'opacity'])};
                 width: 6px;
                 height: 6px;
                 transform: scale(0);
@@ -164,20 +153,20 @@ const SubMenuWrapper = styled(Box)(
         }
       }
     }
-`
+`,
 );
 
 const TextTile = styled('div')({
   marginBottom: 0,
   marginTop: 5,
-  marginLeft: 5
+  marginLeft: 5,
 });
 const MenuTile = styled('div')({
-  display: 'flex'
+  display: 'flex',
 });
 
 const TextButton = styled('div')({
-  marginLeft: 15
+  marginLeft: 15,
 });
 
 function SidebarMenu() {
@@ -247,43 +236,23 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   <TextButton>에이전트 트리뷰</TextButton>
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   <TextButton> 에이전트 목록</TextButton>
                 </Button>
               </ListItem>
 
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   <TextButton> 포인트 트랜잭션 내역</TextButton>
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   <TextButton> 캐쉬 트랜잭션 내역</TextButton>
                 </Button>
               </ListItem>
@@ -305,22 +274,12 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   유저 목록
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   트랜잭션 내역
                 </Button>
               </ListItem>
@@ -342,22 +301,12 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   신청 처리 내역
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   포인트 입금 신청
                 </Button>
               </ListItem>
@@ -366,12 +315,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   캐쉬 출금 신청
                 </Button>
               </ListItem>
@@ -457,52 +401,27 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   기본 API (트랜스퍼)
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   콜백 API (심리스)
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   콜백 API 테스트
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   콜백 API 테스트 로그
                 </Button>
               </ListItem>
               <ListItem component="div">
-                <Button
-                  disableRipple
-                  component={RouterLink}
-                  onClick={closeSidebar}
-                  to="/management/history"
-                >
+                <Button disableRipple component={RouterLink} onClick={closeSidebar} to="/management/history">
                   API 에러 로그
                 </Button>
               </ListItem>
